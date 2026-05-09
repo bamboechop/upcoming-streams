@@ -16,7 +16,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@lucide/vue": "^1.8.0",
+    "@lucide/vue": "^1.14.0",
     "@tailwindcss/vite": "^4.2.4",
     "@vueuse/core": "^14.2.1",
     "tailwindcss": "^4.2.4",
