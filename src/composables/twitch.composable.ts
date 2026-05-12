@@ -201,6 +201,7 @@ export const useTwitch = () => {
         const relevant = data.data.segments.filter(item => {
           if (item.canceled_until) return false;
           if (item.end_time && new Date(item.end_time) < now) return false;
+          if (vacation.value && item.start_time && new Date(item.start_time) < new Date(vacation.value.end_time) && new Date(item.start_time) > new Date(vacation.value.start_time)) return false;
           return true;
         });
         allScheduleItems.value.push(...relevant);
