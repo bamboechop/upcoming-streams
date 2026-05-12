@@ -1,5 +1,10 @@
 # Änderungsprotokoll
 
+## [1.5.1] - 2026-05-13
+
+## Behoben
+- Geplante Streams an einem Urlaubstag werden nicht mehr angezeigt.
+
 ## [1.5.0] - 2026-02-28
 
 ### Hinzugefügt
