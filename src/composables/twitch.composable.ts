@@ -382,6 +382,35 @@ export const useTwitch = () => {
     }
   });
 
+  async function trackExtensionLoad(clientId: string, channelId: string, token: string): Promise<void> {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1;
+    const day = now.getDate();
+    const deduplicationKey = `upcoming-streams-loaded.${clientId}.${channelId}.${year}.${month}.${day}`;
+    if (window.localStorage.getItem(deduplicationKey) === '1') {
+      return;
+    }
+
+    try {
+      await window.fetch('https://twitch-extensions.bamboechop.at/api/v1/events', {
+        body: JSON.stringify({
+          event: 'extension.opened',
+          schemaVersion: 1,
+        }),
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+          'X-Extension-Client-Id': clientId,
+        },
+        method: 'POST',
+      });
+      window.localStorage.setItem(deduplicationKey, '1');
+    } catch (_err) {
+      // Silently ignore -- we'll retry on the next load
+    }
+  }
+
   window.Twitch.ext.onContext(({ theme }) => {
     darkMode.value = theme === 'dark';
   });
@@ -398,6 +427,8 @@ export const useTwitch = () => {
     await checkIfLive();
 
     twitchLoading.value = false;
+
+    trackExtensionLoad(auth.clientId, auth.channelId, auth.token);
   });
 
   return {

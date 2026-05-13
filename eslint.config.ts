@@ -19,6 +19,10 @@ export default defineConfigWithVueTs(
   vueTsConfigs.recommended,
   {
     rules: {
+      "@typescript-eslint/no-unused-vars": ['error', {
+          "caughtErrorsIgnorePattern": "^_",
+        },
+      ],
       'vue/multi-word-component-names': ['error', {
         ignores: ['Config', 'Mobile', 'Panel']
       }]
