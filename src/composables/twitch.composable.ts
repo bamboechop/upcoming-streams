@@ -384,11 +384,9 @@ export const useTwitch = () => {
 
   async function trackExtensionLoad(clientId: string, channelId: string, token: string): Promise<void> {
     const now = new Date();
-    const year = now.getFullYear();
-    const month = now.getMonth() + 1;
-    const day = now.getDate();
-    const deduplicationKey = `upcoming-streams-loaded.${clientId}.${channelId}.${year}.${month}.${day}`;
-    if (window.localStorage.getItem(deduplicationKey) === '1') {
+    const today = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
+    const deduplicationKey = `upcoming-streams-loaded.${clientId}.${channelId}`;
+    if (window.localStorage.getItem(deduplicationKey) === today) {
       return;
     }
 
@@ -405,7 +403,7 @@ export const useTwitch = () => {
         },
         method: 'POST',
       });
-      window.localStorage.setItem(deduplicationKey, '1');
+      window.localStorage.setItem(deduplicationKey, today);
     } catch (_err) {
       // Silently ignore -- we'll retry on the next load
     }
