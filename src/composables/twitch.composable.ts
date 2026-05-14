@@ -393,7 +393,7 @@ export const useTwitch = () => {
     }
 
     try {
-      await window.fetch('https://twitch-extensions.bamboechop.at/api/v1/events', {
+      await window.fetch('https://bambat.uber.space/twitch-extensions/api/v1/events', {
         body: JSON.stringify({
           event: 'extension.opened',
           schemaVersion: 1,
