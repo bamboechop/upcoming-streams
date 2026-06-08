@@ -1,5 +1,10 @@
 # Änderungsprotokoll
 
+## [1.5.2] - 2026-06-08
+
+### Wartung
+- Eine Analyse Server URL wurde angepasst.
+
 ## [1.5.1] - 2026-05-13
 
 ## Behoben

@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.5.2] - 2026-06-08
+
+### Maintenance
+- Adjusted a server URL for analytics purposes.
+
 ## [1.5.1] - 2026-05-13
 
 ### Fixed
