@@ -18,3 +18,20 @@ updates:
       - dependency-name: "@types/node"
     assignees:
       - "bamboechop"
+    groups:
+      eslint:
+        patterns:
+          - "eslint*"
+          - "@eslint"
+      tailwind:
+        patterns:
+          - "@tailwindcss*"
+          - "tailwindcss*"
+      vite:
+        patterns:
+          - "vite*"
+          - "@vite*"
+      vue:
+        patterns:
+          - "@vue*"
+          - "vue*"
