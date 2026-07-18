@@ -16,6 +16,9 @@ updates:
       default-days: 7
     ignore:
       - dependency-name: "@types/node"
+        versions: [">24"]
+      - dependency-name: "typescript"
+        versions: ["7"]
     assignees:
       - "bamboechop"
     groups:
