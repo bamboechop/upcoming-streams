@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@lucide/vue": "^1.25.0",
-    "@tailwindcss/vite": "^4.3.2",
+    "@tailwindcss/vite": "^4.3.3",
     "@vueuse/core": "^14.3.0",
     "tailwindcss": "^4.3.2",
     "vue": "^3.5.40",
