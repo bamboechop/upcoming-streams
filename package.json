@@ -34,8 +34,8 @@
     "jiti": "^2.7.0",
     "npm-run-all2": "^9.0.2",
     "typescript": "~6.0.3",
-    "vite": "^8.1.5",
-    "vite-plugin-vue-devtools": "^8.1.5",
+    "vite": "^8.2.0",
+    "vite-plugin-vue-devtools": "^8.2.1",
     "vue-tsc": "^3.3.8"
   },
   "volta": {
