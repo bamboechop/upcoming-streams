@@ -16,6 +16,8 @@
               :show-category-image="showCategoryImage"
               :show-countdown="showCountdown"
               :show-header="showHeader"
+              :show-sticky-footer="showStickyFooter"
+              :show-time-zone-inline="showTimeZoneInline"
               :show-times="showTimes"
               :show-title="showTitle"
               :show-usernames="showUsernames"
@@ -26,6 +28,8 @@
               @update:show-category-image="emits('update:show-category-image', $event)"
               @update:show-countdown="emits('update:show-countdown', $event)"
               @update:show-header="emits('update:show-header', $event)"
+              @update:show-sticky-footer="emits('update:show-sticky-footer', $event)"
+              @update:show-time-zone-inline="emits('update:show-time-zone-inline', $event)"
               @update:show-times="emits('update:show-times', $event)"
               @update:show-title="emits('update:show-title', $event)"
               @update:show-usernames="emits('update:show-usernames', $event)" />
@@ -123,6 +127,8 @@ defineProps<{
   showCountdown: boolean
   showHeader: boolean
   showSuccessMessage: boolean
+  showStickyFooter: boolean
+  showTimeZoneInline: boolean
   showTimes: boolean
   showTitle: boolean
   showUsernames: boolean
@@ -153,6 +159,8 @@ const emits = defineEmits<{
   (e: 'update:show-category-image', value: boolean): void
   (e: 'update:show-countdown', value: boolean): void
   (e: 'update:show-header', value: boolean): void
+  (e: 'update:show-sticky-footer', value: boolean): void
+  (e: 'update:show-time-zone-inline', value: boolean): void
   (e: 'update:show-times', value: boolean): void
   (e: 'update:show-title', value: boolean): void
   (e: 'update:show-usernames', value: boolean): void

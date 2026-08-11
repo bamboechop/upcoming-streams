@@ -45,6 +45,8 @@
       "showStreamCategory": "Stream-Kategorie anzeigen",
       "showCategoryBackgroundImage": "Stream-Kategorie Hintergrundbild anzeigen",
       "showCategoryImage": "Stream-Kategorie Bild anzeigen",
+      "showStickyFooter": "Fußzeile anzeigen",
+      "showTimeZoneInline": "Zeitzone bei jedem Stream anzeigen",
       "showStreamTimes": "Stream-Zeiten anzeigen",
       "showStreamUsernames": "Nutzernamen der Mitspieler anzeigen",
       "panelTitle": "Panel-Titel",

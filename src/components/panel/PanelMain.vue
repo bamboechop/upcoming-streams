@@ -137,18 +137,24 @@
         </template>
       </div>
     </div>
-    <div class="sticky bottom-0 left-0 right-0 flex flex-col gap-y-1 items-center justify-center px-3 py-2 bg-(--extension-color-background) shadow-[0_-4px_6px_rgba(0,0,0,0.25)]">
-      <p class="flex items-center gap-x-1 text-xs text-(--extension-color-text)">
-        <AlarmClock class="shrink-0" :size="fontSize * 0.75" />
-        {{ t('schedule.timesInLocalTimezone') }}
-      </p>
-      <template v-if="scheduleLink && !isMobile">
-        <button
-          class="bg-(--extension-color-schedule-button-background) cursor-pointer text-(--extension-color-schedule-button-font-color) font-semibold text-xs flex items-center gap-x-1 px-4 py-2 rounded-md"
-          type="button"
-          @click="openSchedule">
-          {{ t('schedule.viewFullSchedule') }}
-        </button>
+    <div
+      v-if="showStickyFooter || showMinimizeButton"
+      :class="showStickyFooter
+        ? 'sticky bottom-0 left-0 right-0 flex flex-col gap-y-1 items-center justify-center px-3 py-2 bg-(--extension-color-background) shadow-[0_-4px_6px_rgba(0,0,0,0.25)]'
+        : 'contents'">
+      <template v-if="showStickyFooter">
+        <p class="flex items-center gap-x-1 text-xs text-(--extension-color-text)">
+          <AlarmClock class="shrink-0" :size="fontSize * 0.75" />
+          {{ t('schedule.timesInLocalTimezone') }}
+        </p>
+        <template v-if="scheduleLink && !isMobile">
+          <button
+            class="bg-(--extension-color-schedule-button-background) cursor-pointer text-(--extension-color-schedule-button-font-color) font-semibold text-xs flex items-center gap-x-1 px-4 py-2 rounded-md"
+            type="button"
+            @click="openSchedule">
+            {{ t('schedule.viewFullSchedule') }}
+          </button>
+        </template>
       </template>
       <template v-if="showMinimizeButton">
         <button
@@ -193,6 +199,7 @@ const {
   showCategoryImage,
   showCountdown,
   showMinimizeButton = false,
+  showTimeZoneInline,
   showTimes,
   showTitle,
   showUsernames,
@@ -227,6 +234,8 @@ const {
   showCountdown: boolean
   showHeader: boolean
   showMinimizeButton?: boolean
+  showStickyFooter: boolean
+  showTimeZoneInline: boolean
   showTimes: boolean
   showTitle: boolean
   showUsernames: boolean
@@ -271,6 +280,7 @@ const formatTime = (dateTimeString: string) => {
     hour: 'numeric',
     minute: '2-digit',
     hour12: !urlParams.locale.startsWith('de'),
+    ...(showTimeZoneInline ? { timeZoneName: 'short' as const } : {}),
   });
 }
 
