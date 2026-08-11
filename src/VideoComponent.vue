@@ -22,6 +22,8 @@
         :show-category-image="config.showCategoryImage"
         :show-countdown="config.showCountdown"
         :show-header="config.showHeader"
+        :show-sticky-footer="config.showStickyFooter"
+        :show-time-zone-inline="config.showTimeZoneInline"
         :show-times="config.showTimes"
         :show-title="config.showTitle"
         :show-usernames="config.showUsernames"

@@ -1,5 +1,11 @@
 # Änderungsprotokoll
 
+## [1.6.0] - 2026-08-11
+
+### Hinzugefügt
+- Du kannst nun die Fußzeile ausblenden.
+- Du kannst nun die lokale Zeitzone deiner Zuseher bei jedem geplanten Stream anzeigen.
+
 ## [1.5.2] - 2026-06-08
 
 ### Wartung

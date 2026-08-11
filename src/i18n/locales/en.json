@@ -45,6 +45,8 @@
       "showStreamCategory": "Show stream category",
       "showCategoryBackgroundImage": "Show stream category background image",
       "showCategoryImage": "Show stream category image",
+      "showStickyFooter": "Show sticky footer",
+      "showTimeZoneInline": "Show timezone for each stream",
       "showStreamTimes": "Show stream times",
       "showStreamUsernames": "Show usernames of people you play with during a stream",
       "panelTitle": "Panel title",

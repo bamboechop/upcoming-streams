@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.6.0] - 2026-08-11
+
+### Added
+- You can now hide the sticky footer.
+- You can now display your viewers' local time zone for every scheduled stream.
+
 ## [1.5.2] - 2026-06-08
 
 ### Maintenance

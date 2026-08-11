@@ -106,6 +106,8 @@ export interface TwitchExtensionConfiguration extends TwitchExtensionThemeConfig
   showCategoryImage: boolean;
   showCountdown: boolean;
   showHeader: boolean;
+  showStickyFooter: boolean;
+  showTimeZoneInline: boolean;
   showTimes: boolean;
   showTitle: boolean;
   showUsernames: boolean;

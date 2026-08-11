@@ -110,6 +110,26 @@
           {{ t('config.general.showCountdown') }}
         </CustomLabel>
       </div>
+      <div class="flex flex-row gap-x-[8px]">
+        <input
+          type="checkbox"
+          id="showStickyFooter"
+          :checked="showStickyFooter"
+          @change="emits('update:showStickyFooter', ($event.target as HTMLInputElement).checked)" />
+        <CustomLabel id="showStickyFooter">
+          {{ t('config.general.showStickyFooter') }}
+        </CustomLabel>
+      </div>
+      <div class="flex flex-row gap-x-[8px]">
+        <input
+          type="checkbox"
+          id="showTimeZoneInline"
+          :checked="showTimeZoneInline"
+          @change="emits('update:showTimeZoneInline', ($event.target as HTMLInputElement).checked)" />
+        <CustomLabel id="showTimeZoneInline">
+          {{ t('config.general.showTimeZoneInline') }}
+        </CustomLabel>
+      </div>
     </div>
   </div>
 </template>
@@ -128,6 +148,8 @@ defineProps<{
   showCategoryImage: boolean
   showCountdown: boolean
   showHeader: boolean
+  showStickyFooter: boolean
+  showTimeZoneInline: boolean
   showTimes: boolean
   showTitle: boolean
   showUsernames: boolean
@@ -141,6 +163,8 @@ const emits = defineEmits<{
   (e: 'update:showCategoryImage', value: boolean): void
   (e: 'update:showCountdown', value: boolean): void
   (e: 'update:showHeader', value: boolean): void
+  (e: 'update:showStickyFooter', value: boolean): void
+  (e: 'update:showTimeZoneInline', value: boolean): void
   (e: 'update:showTimes', value: boolean): void
   (e: 'update:showTitle', value: boolean): void
   (e: 'update:showUsernames', value: boolean): void

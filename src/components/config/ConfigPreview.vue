@@ -46,6 +46,8 @@
           :show-category-image="showCategoryImage"
           :show-countdown="showCountdown"
           :show-header="showHeader"
+          :show-sticky-footer="showStickyFooter"
+          :show-time-zone-inline="showTimeZoneInline"
           :show-times="showTimes"
           :show-title="showTitle"
           :show-usernames="showUsernames"
@@ -97,6 +99,8 @@ const props = defineProps<{
   showCategoryImage: boolean
   showCountdown: boolean
   showHeader: boolean
+  showStickyFooter: boolean
+  showTimeZoneInline: boolean
   showTimes: boolean
   showTitle: boolean
   showUsernames: boolean
