@@ -21,7 +21,7 @@
     "@vueuse/core": "^15.0.0",
     "tailwindcss": "^4.3.2",
     "vue": "^3.5.43",
-    "vue-i18n": "^11.4.12"
+    "vue-i18n": "^11.4.13"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.5",
@@ -36,7 +36,7 @@
     "typescript": "~6.0.3",
     "vite": "^8.3.1",
     "vite-plugin-vue-devtools": "^8.2.1",
-    "vue-tsc": "^3.3.11"
+    "vue-tsc": "^3.3.12"
   },
   "volta": {
     "node": "24.16.0",
